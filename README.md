@@ -1,7 +1,7 @@
-# loganlabarge-afk.github.io
+# loganlabarge.github.io
 
 Personal website of Logan LaBarge, served free by GitHub Pages at
-**https://loganlabarge-afk.github.io/**.
+**https://loganlabarge.github.io/**.
 
 Plain HTML and CSS: no build step, no frameworks, no web fonts, no paid services.
 
@@ -35,11 +35,11 @@ becomes public.
 
 1. Open **GitHub Desktop**, then **File > Add local repository** and choose this folder.
 2. Commit any changes, then click **Publish repository**.
-   - Name: `loganlabarge-afk.github.io` (it must match exactly, or the address changes)
+   - Name: `loganlabarge.github.io` (it must match exactly, or the address changes)
    - **Untick "Keep this code private."**
 3. On github.com open the repo, then **Settings > Pages**. Under *Build and deployment*, set
    Source = *Deploy from a branch*, Branch = `main`, folder `/ (root)`, and save.
-4. After about a minute the site is live at https://loganlabarge-afk.github.io/.
+4. After about a minute the site is live at https://loganlabarge.github.io/.
 
 Updates later: edit, commit in GitHub Desktop, then **Push origin**. The site refreshes
 within about a minute.
@@ -48,7 +48,7 @@ within about a minute.
 
 1. Go to https://search.google.com/search-console and sign in with your Google account.
 2. **Add property**, then choose **URL prefix** (not "Domain", which needs your own domain),
-   and enter `https://loganlabarge-afk.github.io/`.
+   and enter `https://loganlabarge.github.io/`.
 3. Choose the **HTML tag** method and copy the `<meta name="google-site-verification" ...>` tag.
 4. Paste it into `index.html` where the comment says so, commit, and push. Wait a minute,
    then click **Verify**.
@@ -62,7 +62,7 @@ Keep the meta tag in the page forever; removing it un-verifies the property.
 1. Go to https://www.bing.com/webmasters and sign in.
 2. Choose **Import from Google Search Console** (fastest), or add the site and use the
    `msvalidate.01` meta tag the same way as Google's.
-3. Submit `https://loganlabarge-afk.github.io/sitemap.xml`.
+3. Submit `https://loganlabarge.github.io/sitemap.xml`.
 
 ## Checking the SEO after it's live
 

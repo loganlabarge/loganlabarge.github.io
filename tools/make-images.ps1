@@ -4,7 +4,7 @@
 param(
     [string]$Name = 'Logan LaBarge',
     [string]$Subtitle = ('Finance  {0}  Game Development  {0}  Monk High Games' -f [char]0x00B7),
-    [string]$Url = 'loganlabarge-afk.github.io'
+    [string]$Url = 'loganlabarge.github.io'
 )
 
 Add-Type -AssemblyName System.Drawing

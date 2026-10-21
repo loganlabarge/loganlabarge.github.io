@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://loganlabarge-afk.github.io/sitemap.xml
+Sitemap: https://loganlabarge.github.io/sitemap.xml
