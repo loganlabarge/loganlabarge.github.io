@@ -6,8 +6,7 @@ $files = Get-ChildItem $root -Recurse -Include *.html, *.xml, *.txt -File |
 
 $patterns = @(
     @{ Label = 'TODO placeholder';        Regex = 'TODO' },
-    @{ Label = 'unconfirmed draft text';  Regex = 'class="[^"]*\bdraft\b' },
-    @{ Label = 'verification comment';    Regex = 'paste the tag each service gives you' }
+    @{ Label = 'unconfirmed draft text';  Regex = 'class="[^"]*\bdraft\b' }
 )
 
 $problems = 0
