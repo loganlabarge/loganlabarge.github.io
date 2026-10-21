@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- News feed for the Amator Fortuna page. Add a new <entry> at the top for each announcement
+     on the page, and set the feed's <updated> to the newest entry's date. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Amator Fortuna news</title>
+  <subtitle>Announcements and development updates from Monk High Games.</subtitle>
+  <link href="https://loganlabarge.github.io/amator-fortuna/" rel="alternate" type="text/html"/>
+  <link href="https://loganlabarge.github.io/amator-fortuna/feed.xml" rel="self" type="application/atom+xml"/>
+  <id>https://loganlabarge.github.io/amator-fortuna/</id>
+  <updated>2026-10-21T00:00:00Z</updated>
+  <author>
+    <name>Logan LaBarge</name>
+    <uri>https://loganlabarge.github.io/</uri>
+  </author>
+
+  <entry>
+    <title>Official site launched</title>
+    <link href="https://loganlabarge.github.io/amator-fortuna/#official-site-launch" rel="alternate" type="text/html"/>
+    <id>https://loganlabarge.github.io/amator-fortuna/#official-site-launch</id>
+    <published>2026-10-21T00:00:00Z</published>
+    <updated>2026-10-21T00:00:00Z</updated>
+    <summary>Amator Fortuna now has an official home on the web. Announcements and development updates from Monk High Games will be posted here.</summary>
+  </entry>
+</feed>

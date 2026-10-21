@@ -23,11 +23,21 @@ foreach ($f in $files) {
     }
 }
 
-# The structured data must still be valid JSON after editing.
-$html = [System.IO.File]::ReadAllText((Join-Path $root 'index.html'))
-$m = [regex]::Match($html, '<script type="application/ld\+json">(.*?)</script>', 'Singleline')
-try { $null = $m.Groups[1].Value | ConvertFrom-Json -ErrorAction Stop }
-catch { $problems++; Write-Output "index.html  [JSON-LD]  structured data is not valid JSON: $($_.Exception.Message)" }
+# The structured data on every page must still be valid JSON after editing.
+foreach ($f in $files | Where-Object { $_.Extension -eq '.html' }) {
+    $html = [System.IO.File]::ReadAllText($f.FullName)
+    $rel = $f.FullName.Substring($root.Length + 1)
+    foreach ($m in [regex]::Matches($html, '<script type="application/ld\+json">(.*?)</script>', 'Singleline')) {
+        try { $null = $m.Groups[1].Value | ConvertFrom-Json -ErrorAction Stop }
+        catch { $problems++; Write-Output "$rel  [JSON-LD]  structured data is not valid JSON: $($_.Exception.Message)" }
+    }
+}
+
+# Feeds must be well-formed XML.
+foreach ($f in $files | Where-Object { $_.Extension -eq '.xml' }) {
+    try { $null = [xml][System.IO.File]::ReadAllText($f.FullName) }
+    catch { $problems++; Write-Output "$($f.FullName.Substring($root.Length + 1))  [XML]  not well-formed: $($_.Exception.Message)" }
+}
 
 if ($problems -gt 0) {
     Write-Output ""

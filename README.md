@@ -7,10 +7,12 @@ Plain HTML and CSS: no build step, no frameworks, no web fonts, no paid services
 
 | File | Purpose |
 |---|---|
-| `index.html` | The whole site: content, SEO tags, Open Graph tags, JSON-LD structured data |
-| `assets/styles.css` | Styles (light and dark mode, mobile layout) |
-| `assets/og-image.png` | 1200x630 card shown when the link is shared |
-| `assets/favicon.*`, `apple-touch-icon.png` | Browser and phone icons |
+| `index.html` | The personal page: content, SEO tags, Open Graph tags, JSON-LD structured data |
+| `amator-fortuna/index.html` | The official Amator Fortuna game page (about, features, developer, news, press fact sheet) |
+| `amator-fortuna/feed.xml` | Atom news feed for the game page's announcements |
+| `assets/styles.css` | Styles (light and dark mode, mobile layout; the game page's dark theme is under `.game`) |
+| `assets/og-image.png`, `og-amator-fortuna.png` | 1200x630 cards shown when each page's link is shared |
+| `assets/favicon*`, `apple-touch-icon*.png` | Browser and phone icons (`-af` = the game page's) |
 | `robots.txt` | Lets every crawler in (search engines and AI search) and points to the sitemap |
 | `sitemap.xml` | The page list for Google and Bing; update `<lastmod>` when the content changes |
 | `404.html` | "Page not found" page |
@@ -43,6 +45,19 @@ becomes public.
 
 Updates later: edit, commit in GitHub Desktop, then **Push origin**. The site refreshes
 within about a minute.
+
+## Posting a game announcement
+
+1. In `amator-fortuna/index.html`, copy the newest `<article class="news-item">` block, paste
+   it above the old one, and change the `id`, the date (both `datetime` and the visible text),
+   the heading and the text.
+2. In `amator-fortuna/feed.xml`, copy the newest `<entry>` the same way, match its `id`/link to
+   the new article's `id`, and set the feed's top `<updated>` to the new date.
+3. Bump `<lastmod>` for the game page in `sitemap.xml` and `dateModified` in its JSON-LD.
+4. Run the check, commit, push.
+
+Never post screenshots or footage that show the Conquest Reforged textures or GUI (all rights
+reserved): only images from a build that passes the game's Conquest release gate.
 
 ## Google Search Console (free)
 
