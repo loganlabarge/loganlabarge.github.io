@@ -1,0 +1,6 @@
+# Every crawler is welcome: search engines (Googlebot, Bingbot) and AI search
+# crawlers (OAI-SearchBot / ChatGPT, PerplexityBot, Claude-SearchBot, etc.).
+User-agent: *
+Allow: /
+
+Sitemap: https://loganlabarge-afk.github.io/sitemap.xml
