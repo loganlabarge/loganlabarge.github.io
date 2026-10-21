@@ -294,7 +294,8 @@ a:hover { text-decoration-thickness: 2px; }
   display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1rem;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem;
 }
-.contact-label { font-weight: 700; min-width: 6rem; }
+.contact-label { font-weight: 700; min-width: 7.5rem; display: inline-flex; align-items: center; gap: .55rem; }
+.social-icon { width: 1.15rem; height: 1.15rem; flex: none; fill: currentColor; }
 .contact-list a { overflow-wrap: anywhere; }
 
 /* Footer */
